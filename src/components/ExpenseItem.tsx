@@ -1,14 +1,14 @@
-function ExpenseItem() {
-    const expenseDate = new Date(2022, 10, 7);
-    const expenseTitle = 'Car Insurance';
-    const expenseAmount = '$200.75';
+import ExpenseDate from "./ExpenseDate";
+
+function ExpenseItem(props:any) {
 
     return (
         <div>
-            <div>{expenseDate.toDateString()}</div>
+            <ExpenseDate expenseDate={props.expenseDate}></ExpenseDate>
+
             <div>
-                <h2>{expenseTitle}</h2>
-                <div>{expenseAmount}</div>
+                <h2>{props.expenseTitle}</h2>
+                <div>{props.expenseAmount}</div>
             </div>
         </div>
     );
