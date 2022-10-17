@@ -2,24 +2,24 @@ import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 
 const Expenses = () => {
-    const expenses:Array<{id:number, expenseDate:string|Date, expenseTitle:string, expenseAmount:string}> = [
+    const expenses:Array<{id:number, expenseDate:string|Date, expenseTitle:string, expenseAmount:number}> = [
         {
             id: Math.random(),
             expenseDate: new Date(2022, 10, 7),
             expenseTitle: 'Car Insurance',
-            expenseAmount: '$200.75'
+            expenseAmount: 200.75
         },
         {
             id: Math.random(),
             expenseDate: new Date(2022, 10, 7),
             expenseTitle: 'Mortgage',
-            expenseAmount: '$1,000.99'
+            expenseAmount: 1_000.99
         },
         {
             id: Math.random(),
             expenseDate: new Date(2022, 10, 7),
             expenseTitle: 'Internet',
-            expenseAmount: '$40.25'
+            expenseAmount: 40.25
         }
     ];
 
