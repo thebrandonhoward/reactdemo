@@ -1,7 +1,7 @@
-import Card from "./Card";
+import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 
-function Expenses() {
+const Expenses = () => {
     const expenses:Array<{id:number, expenseDate:string|Date, expenseTitle:string, expenseAmount:string}> = [
         {
             id: Math.random(),
