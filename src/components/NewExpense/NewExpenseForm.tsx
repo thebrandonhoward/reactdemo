@@ -2,8 +2,8 @@ import React from 'react';
 import './NewExpenseForm.css';
 
 const NewExpenseForm = (props:any) => {
-    const onTitleChangeHandler = () => {
-     console.warn('onTitleChangeHandler!');
+    const onTitleChangeHandler = (event:any) => {
+     console.warn(event.target.value);
     }
 
     return(
