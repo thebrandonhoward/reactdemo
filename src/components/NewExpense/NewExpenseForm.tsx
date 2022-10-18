@@ -14,28 +14,44 @@ const NewExpenseForm = (props:any) => {
     const onTitleChangeHandler = (event:any) => {
      console.warn(event.target.value);
      // setEnteredTitle(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredTitle: event.target.value,
-        })
+
+     //    setUserInput({
+     //        ...userInput,
+     //        enteredTitle: event.target.value,
+     //    })
+
+     setUserInput((previousState) => {
+         return {...previousState, enteredTitle: userInput.enteredTitle}
+     });
      console.log(userInput.enteredTitle);
     }
+
     const onAmountChangeHandler = (event:any) => {
         console.warn(event.target.value);
         // setEnteredAmount(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredAmount: event.target.value,
-        })
+
+        // setUserInput({
+        //     ...userInput,
+        //     enteredAmount: event.target.value,
+        // })
+
+        setUserInput((previousState) => {
+            return {...previousState, enteredAmount: userInput.enteredAmount}
+        });
         console.log(userInput.enteredAmount);
     }
     const onDateChangeHandler = (event:any) => {
         console.warn(event.target.value);
         // setEnteredDate(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredDate: event.target.value,
-        })
+
+        // setUserInput({
+        //     ...userInput,
+        //     enteredDate: event.target.value,
+        // })
+
+        setUserInput((previousState) => {
+            return {...previousState, enteredDate: userInput.enteredDate}
+        });
         console.log(userInput.enteredDate);
     }
 
