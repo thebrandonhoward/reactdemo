@@ -6,6 +6,10 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
+  const onAddExpenseHandler = (expense:{}) => {
+    console.log('App.tsx');
+    console.log(expense);
+  }
 
   return (
     <div className="App">
@@ -25,7 +29,7 @@ const App = () => {
       </header> */}
 
       <body>
-        <NewExpense></NewExpense>
+        <NewExpense onAddExpenseHandler={onAddExpenseHandler}></NewExpense>
         <Expenses></Expenses>
       </body>
     </div>
