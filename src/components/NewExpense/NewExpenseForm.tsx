@@ -21,7 +21,7 @@ const NewExpenseForm = (props:any) => {
      //    })
 
      setUserInput((previousState) => {
-         return {...previousState, enteredTitle: userInput.enteredTitle}
+         return {...previousState, enteredTitle: event.target.value}
      });
      console.log(userInput.enteredTitle);
     }
@@ -36,7 +36,7 @@ const NewExpenseForm = (props:any) => {
         // })
 
         setUserInput((previousState) => {
-            return {...previousState, enteredAmount: userInput.enteredAmount}
+            return {...previousState, enteredAmount: event.target.value}
         });
         console.log(userInput.enteredAmount);
     }
@@ -50,7 +50,7 @@ const NewExpenseForm = (props:any) => {
         // })
 
         setUserInput((previousState) => {
-            return {...previousState, enteredDate: userInput.enteredDate}
+            return {...previousState, enteredDate: event.target.value}
         });
         console.log(userInput.enteredDate);
     }
