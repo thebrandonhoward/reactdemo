@@ -6,6 +6,27 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
+  const expenses:Array<{id:number, expenseDate:string|Date, expenseTitle:string, expenseAmount:number}> = [
+    {
+      id: Math.random(),
+      expenseDate: new Date(2022, 10, 7),
+      expenseTitle: 'Car Insurance',
+      expenseAmount: 200.75
+    },
+    {
+      id: Math.random(),
+      expenseDate: new Date(2022, 10, 7),
+      expenseTitle: 'Mortgage',
+      expenseAmount: 1_000.99
+    },
+    {
+      id: Math.random(),
+      expenseDate: new Date(2022, 10, 7),
+      expenseTitle: 'Internet',
+      expenseAmount: 40.25
+    }
+  ];
+
   const onAddExpenseHandler = (expense:{}) => {
     console.log('App.tsx');
     console.log(expense);
@@ -30,7 +51,7 @@ const App = () => {
 
       <body>
         <NewExpense onAddExpenseHandler={onAddExpenseHandler}></NewExpense>
-        <Expenses></Expenses>
+        <Expenses items={expenses}></Expenses>
       </body>
     </div>
   );
