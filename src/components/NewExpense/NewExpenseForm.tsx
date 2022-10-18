@@ -66,6 +66,10 @@ const NewExpenseForm = (props:any) => {
         }
 
         console.log(expenseData);
+
+        setEnteredTitle('');
+        setEnteredAmount('');
+        setEnteredDate('');
     }
 
     return(
@@ -73,15 +77,15 @@ const NewExpenseForm = (props:any) => {
             <div>
                 <div>
                     <label>Title</label>
-                    <input type='text' onChange={onTitleChangeHandler}/>
+                    <input type='text' value={enteredTitle} onChange={onTitleChangeHandler}/>
                 </div>
                 <div>
                     <label>Amount</label>
-                    <input type='number' min='0.01' step='0.01' onChange={onAmountChangeHandler}/>
+                    <input type='number' value={enteredAmount} min='0.01' step='0.01' onChange={onAmountChangeHandler}/>
                 </div>
                 <div>
                     <label>Date</label>
-                    <input type='date' min='2021-01-01' max='2022-12-31' onChange={onDateChangeHandler}/>
+                    <input type='date' value={enteredDate} min='2021-01-01' max='2022-12-31' onChange={onDateChangeHandler}/>
                 </div>
             </div>
             <div>
