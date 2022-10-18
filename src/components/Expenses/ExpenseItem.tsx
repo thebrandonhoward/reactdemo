@@ -7,6 +7,8 @@ const ExpenseItem = (props:any) => {
     const [ expenseDate, setExpenseDate ] = useState(props.expenseDate);
     const [ expenseAmount, setExpenseAmount ]= useState(props.expenseAmount);
 
+    console.log("State Render");
+
     const onClickHandler = () => {
         console.log("Clicked!");
         setExpenseAmount(expenseAmount + 1.00);
